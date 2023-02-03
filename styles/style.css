@@ -1,0 +1,725 @@
+@import url("./normalize.css");
+@import url("./grid.css");
+@import url("./font.css");
+
+:root{
+    --text-color:#95A5C6;
+    --app-bg-color:#161D26;
+    --section-bg-color:#1F2935;
+    --primary-color:#EFEFEF;
+    --secondary-color:#D82148;
+    --third-color:#FF6331;
+}
+
+/* 
+    ====================
+         reset styles
+    ====================
+*/
+a{
+    text-decoration: none;
+    /* color: #803afb; */
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* 
+    ====================
+         component
+    ====================
+*/
+
+.app-btn{
+    width: 18rem;
+    height: 5.2rem;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem;
+    background-color:var(--primary-color);
+    font-family: "IRANSans";
+    box-shadow: 0 0 10px rgba(227, 228, 233, 0.3);
+}
+.app-btn--orange{
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(227, 228, 233, 0.3);
+    color: #fff;
+}
+
+.section-head{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.section-head__title{
+    font-family:  "IRANSans bold";
+    font-size: 4.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+.section-head__caption{
+    color: var(--text-color);
+    margin: .5rem 0 2rem 0;
+    letter-spacing: .25rem;
+}
+
+
+/* 
+    ====================
+        helper class
+    ====================
+*/
+
+.align-items-center{
+    align-items: center;
+}
+
+.h-full{
+    height: 100%;
+}
+/* 
+    ====================
+          styles
+    ====================
+*/
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: "IRANSans";
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--app-bg-color);
+    padding-top: 12rem;
+    direction: rtl;
+}
+
+/* 
+    ====================
+            header
+    ====================
+*/
+.header{
+    background-color: var(--section-bg-color);
+    box-shadow: 0 .5rem 4rem rgba(245, 248, 248, 0.16);
+    z-index: 100;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.nav{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 3rem 0;
+}
+.nav__logo{
+    color: var(--primary-color);
+    font-family: "IRANSans bold";
+    font-size: 4rem;
+    margin: 0;
+}
+.menu{
+    display: flex;
+    z-index: 100;
+
+}
+.menu__item{
+    margin-right: 4rem;
+}
+.menu__item:first-child{
+    margin-right: 0;
+}
+.menu__link{
+    display: inline-block;
+    color: inherit;
+    font-family: "IRANSans";
+    transition: color 120ms ease-in;
+}
+.menu__link:hover{
+    color: var(--primary-color);
+}
+.menu__item--active{
+    color: var(--primary-color);
+}
+.nav__toggle-icon{
+    display: none;
+    width: 5rem;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.nav__toggle-line{
+    position: relative;
+    transition: all 100ms ease-in;
+}
+.nav__toggle-line,
+.nav__toggle-line::before,
+.nav__toggle-line::after{
+    content: " ";
+    width: 4.5rem;
+    height: .4rem;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+}
+.nav__toggle-line::before{
+    position: absolute;
+    top: 1.2rem;
+    transition: all 120ms ease-in;
+}
+.nav__toggle-line::after{
+    position: absolute;
+    bottom: 1.2rem;
+    transition: all 120ms ease-in;
+}
+.nav__toggle-icon--open .nav__toggle-line::before{
+    transform: translateY(-1.2rem) rotate(-45deg);
+}
+.nav__toggle-icon--open .nav__toggle-line{
+    background-color: transparent;
+}
+.nav__toggle-icon--open .nav__toggle-line::after{
+    transform: translateY(1.2rem) rotate(45deg);
+}
+/* 
+    ====================
+           main
+    ====================
+*/
+
+/* 
+    ====================
+           home
+    ====================
+*/
+
+.home{
+   padding-top: 10rem;
+   height: 20rem;
+   background-image: url(../assets/images/home-bg1.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   display: block;
+}
+.home__name{
+    font-family: "IRANSans bold";
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin: 0;
+}
+.home__name span{
+    color: var(--secondary-color);
+}
+.home__title{
+    font-family: "IRANSans";
+    color: var(--primary-color);
+    font-size: 5rem;
+    margin: 0;
+}
+.home__content{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.home__caption{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    opacity: .7;
+
+}
+.home__links-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home__link:first-child{
+    margin-left: 3rem;
+   }
+/*  ====================
+          about us
+    ====================
+*/
+.aboutus{
+    margin-top: 2rem;
+}
+.abuot{
+    display: flex;
+    background-color: var(--section-bg-color);
+    min-height: 62rem;
+    
+}
+
+.about__content{
+    padding: 4rem;
+}
+.about__title{
+    font-family:  "IRANSans bold";
+    font-size: 2.4rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.about__description{
+    margin: 0 auto;
+    margin-bottom: 7rem;
+    text-align: justify;
+    line-height: 1.7;
+    width: 70%;
+}
+.about-list__title{
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-family:  "IRANSans bold";
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.about-list{
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+}
+.about-list__item{
+    margin-bottom: 1rem;
+    position: relative;
+    padding-right: 3rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: var(--text-color);
+    border-radius: .5rem;
+    padding: .3rem 1rem;
+}
+.about-list__item:last-child{
+    margin-bottom: 0;
+}
+
+.about__links--wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 4rem;
+}
+.progress-caption{
+    display: block;
+    margin-bottom: 1rem;
+}
+.progress_br{
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.progress{
+    display: flex;
+    overflow: hidden;
+    height: 14px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    font-size: .75rem;
+}
+.progress-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--text-color) ;
+    transition: width .6s ease;
+}
+
+/* 
+    ====================
+          services
+    ====================
+*/
+.services{
+    margin-top: 8rem;   
+}
+.service{
+    color: #fff;
+    text-align: center;
+    padding: 6.5rem 3rem;
+    position: relative;
+    z-index: 5;
+    height: 100%;
+    background-color: var(--third-color);
+    border-radius: .5rem;
+}
+
+.service__title{
+    font-size: 2.4rem;
+    font-family:"IRANSans bold";
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+}
+.service__caption{
+    margin-bottom: 0;
+    font-size: 1.6rem;
+}
+
+/* 
+    ====================
+          Resume
+    ====================
+*/
+.resume{
+    margin-top: 8rem;
+    padding: 8rem 0;
+    background-color: var(--section-bg-color);
+    }
+.resume-list{
+    background-color: var(--app-bg-color);
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 38rem;
+    margin-right: 3rem;
+}
+
+.resume-list__item{
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.resume-list__item:last-child{
+    margin-bottom: 0;
+}
+.resume-list__item--active{
+    /* background-color: var(--primary-color); */
+    color: #FF5823;
+}
+
+.resume-list__icon{
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0 0.8rem;
+}
+.resume-list__text{
+    font-family: "IRANSans";
+    font-size: 1.8rem;
+    margin-left: 2.5rem;
+    transition: all .2s ease-in;
+}
+.resume-content{
+    border-left: .2rem solid var(--primary-color);
+    padding-left: 3rem;
+    height: 0;
+    overflow: hidden;
+    transition: opacity .2s ease-in;
+    opacity: 0;
+}
+.resume-content--show{
+    
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+}
+.resume-content__item{
+    margin-bottom: 2rem;
+}
+.resume-content__item:last-child{
+    margin-bottom: 0;
+}
+
+.resume-content__title{
+    color: #FF5823;
+    font-family: "IRANSans";
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.resume-content__date{
+   border-radius: 2rem;
+   padding: .2rem 1.5rem;
+   color: var(--text-color);
+   display: block;
+   margin-bottom: 1.3rem;
+}
+.resume-content__description-box{
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: var(--text-color);
+    border-radius: .5rem;
+    padding: .3rem 1rem;
+    /* margin: .3rem .3rem 4rem; */
+}
+.resume-content__hard-skill{
+    display: block;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: var(--text-color);
+    border-radius: .5rem;
+    padding: .3rem 1rem;
+    margin: 1.2rem;
+}
+.bg-green-dark{
+    background-color: #0a5307;
+}
+.bg-green-mid{
+    background-color: #109b0b;
+}
+.bg-green-light{
+    background-color: #10dd09;
+}
+.resume-content-box{
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resume-content-cricle{
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 100%;
+    background-color: #13B6FF;
+    margin-right: .4rem;
+}
+.resume-content__subtitle{
+    font-family:  "IRANSans";
+    font-size: 1.6rem;
+    margin: .8rem 0;
+
+}
+.resume-content__description{
+    margin: 0;
+}
+/* 
+    ====================
+          portfolio
+    ====================
+*/
+.portfolio{
+    margin-top: 8rem;
+}
+.portfolio-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+.portfolio-list__item{
+    padding: 1.2rem 3rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: all 120ms ease-in;
+}
+.portfolio-list__item--active{
+    color: #fff;
+    background-color: var(--secondary-color);
+}
+.portfolio-content{
+    height: 0;
+    overflow: hidden;
+    transition: opacity 120ms ease-in;
+    opacity: 0;
+}
+.portfolio-content--show{
+    height: auto;
+    opacity: 1;
+}
+.portfolio-content__img{
+    width: 100%;
+}
+.swiper-pagination-bullet{
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+    border: .3rem solid #BFBEBE !important;
+    background-color: #fff !important;
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet-active{
+    border-color: var(--primary-color) !important;
+}
+.swiper-pagination{
+    position: static !important;
+    margin-top: 1rem;
+}
+
+/* 
+    ====================
+          pricing
+    ====================
+*/
+.pricing{
+    margin-top: 8rem;
+    padding: 8rem 0 14rem 0;
+    background-color: var(--section-bg-color);
+}
+
+.package__head{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 0;    
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;  
+    background-color: var(--third-color);  
+}
+.package__type{
+    margin: 0;
+    font-family: "IRANSans";
+    font-size: 2.8rem;
+}
+.package__price{
+    font-family: "IRANSans bold";
+    font-size: 2rem;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.package__body{
+    padding: 3rem 0;
+    background-color: var(--app-bg-color);
+    text-align: center;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.package-options{
+    width: 19rem;
+    margin: 0 auto;
+    margin-right: 4rem;
+}
+.package-options__item{
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.package-options__item:last-child{
+    margin-bottom: 0;
+}
+.package-options__icon{
+    margin-left:  1rem;
+    }
+
+.package__link{
+    margin: auto;
+    margin: 2.5rem auto 0 auto;
+    background-color: var(--third-color);
+}
+
+/* 
+    ====================
+          contact us
+    ====================
+*/
+.contactus{
+    padding-top: 8rem;
+    background-image: url(../assets/images/contact-bg.jpg);
+    background-size: cover;
+}
+.contactus__wrapper{
+    height: 76rem;
+    padding: 1rem 0 5rem;
+}
+.contact{
+    background-color: var(--app-bg-color);
+    /* box-shadow: 0 0 .5rem rgba(255, 255, 255, 0.24); */
+    max-width: 55rem;
+    padding: 4.5rem;
+    margin: 0 auto;
+}
+.contact__title{
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    font-family: "IRANSans bold";
+    margin: 0;
+}
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.contact__input{
+    border: none;
+    outline: none;
+    padding: 1.5rem 2.5rem;
+    border-radius: 1rem;
+    color: var(--text-color);
+    background-color: var(--section-bg-color);
+}
+.contact__input::placeholder{
+    color: inherit;
+}
+.contact__input--textarea{
+    resize: vertical;
+    max-height: 15rem;
+    min-height: 8rem;
+}
+.contact__submit{
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    border-radius: 5rem;
+    font-family: "IRANSans";
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* 
+    ====================
+         footer
+    ====================
+*/
+.footer{
+    padding: 2rem 0;
+    background-color: var(--app-bg-color);
+}
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.footer__copy-right{
+    font-family: "IRANSans";
+}
+.footer__socials{
+    display: flex;
+    gap: 1rem;
+}
+.footer__social,
+.change-theme{
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer__social svg,
+.change-theme svg{
+    height: 3rem;
+    width: 3rem;
+    fill: var(--app-bg-color);
+}
+.change-theme svg{
+    fill: #fff;
+}

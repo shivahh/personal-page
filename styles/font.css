@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "IRANSans";
+    src: url(../assets/fonts/IRANSans/IRANSans.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "IRANSans bold";
+    src: url(../assets/fonts/IRANSans/IRANSans_Bold.ttf) format("truetype");
+}
