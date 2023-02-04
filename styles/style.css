@@ -301,7 +301,10 @@ body{
 .about-list__item:last-child{
     margin-bottom: 0;
 }
-
+.progress__wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
 .about__links--wrapper{
     display: flex;
     align-items: center;
@@ -566,6 +569,10 @@ body{
     margin-top: 8rem;
     padding: 8rem 0 14rem 0;
     background-color: var(--section-bg-color);
+}
+
+.package{
+    margin-bottom: 2rem;
 }
 
 .package__head{

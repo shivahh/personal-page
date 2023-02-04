@@ -190,11 +190,6 @@
     .home__name{
         font-size: 2rem;
     }
-    .home{
-        /* padding-top: 10rem; */
-        /* min-height: 45rem; */
-        /* text-align: center; */
-    }  
    
     .home__link:first-child{
         margin-right: 1rem;
@@ -202,6 +197,9 @@
     }
     .home__content{
         margin: 0 auto;
+    }
+    .progress__wrapper{
+        width: 100%;
     }
     .about__links--wrapper{
         gap: 1rem;
@@ -213,7 +211,7 @@
         flex-wrap: wrap;
     }
     .about__content{
-        padding: 10rem;
+        padding: 2rem;
     }
     .package-options{
         margin-right: 8rem;
