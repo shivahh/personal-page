@@ -196,7 +196,7 @@
     }
     .home{
         padding-top: 0;
-        height: 40rem;
+        min-height: 40rem;
         text-align: center;
     }  
    
@@ -229,6 +229,9 @@
     .contact{
         padding: 4.5rem 2rem;
     }   
+    .home__link:first-child{
+        margin-left: 0;
+    }
 
 }
 
